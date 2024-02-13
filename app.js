@@ -2,6 +2,7 @@ const express= require("express")
 const cors=require("cors")
 const mongoose=require("mongoose")
 const securityRouter=require("./controllers/securityRouter")
+const visitorRouter=require("./controllers/visitorRouter")
 
 const app=express()
 
@@ -18,6 +19,7 @@ app.post("/post",async(req,res)=>{
     })*/
 
 app.use("/security",securityRouter)
+app.use("/visitor",visitorRouter)
 
 mongoose.connect("mongodb+srv://Anagha123:anagha123@cluster0.8e1jiqb.mongodb.net/securityDb?retryWrites=true&w=majority",
 {

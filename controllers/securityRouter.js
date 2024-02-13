@@ -1,6 +1,5 @@
 const express=require("express")
 const router=express.Router()
-const usermodels=require("../models/securityModels")
 const bcrypt= require("bcryptjs")
 const securityModels = require("../models/securityModels")
 
